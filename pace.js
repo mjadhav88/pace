@@ -292,14 +292,14 @@
         el.children[0].style[key] = transform;
       }
       if (!this.lastRenderedProgress || this.lastRenderedProgress | 0 !== this.progress | 0) {
-        el.children[0].setAttribute('data-progress-text', "" + (this.progress | 0) + "%");
+        el.children[0].setAttribute('data-uib-progress-text', "" + (this.progress | 0) + "%");
         if (this.progress >= 100) {
           progressStr = '99';
         } else {
           progressStr = this.progress < 10 ? "0" : "";
           progressStr += this.progress | 0;
         }
-        el.children[0].setAttribute('data-progress', "" + progressStr);
+        el.children[0].setAttribute('data-uib-progress', "" + progressStr);
       }
       return this.lastRenderedProgress = this.progress;
     };
